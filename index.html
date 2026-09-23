@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trinity Services</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-mode">
+
+<!-- ================= HEADER ================= -->
+
+<header class="site-header">
+
+    <div class="header-inner">
+
+        <a href="#" class="logo">
+            <span class="logo-symbol">T</span>
+            <span class="logo-text">TRINITY</span>
+        </a>
+
+        <nav class="desktop-nav">
+
+            <a href="#services" data-i18n="navServices">
+                What we do
+            </a>
+
+            <a href="#industries" data-i18n="navIndustries">
+                Industries
+            </a>
+
+            <a href="#insights" data-i18n="navInsights">
+                Insights
+            </a>
+
+            <a href="#about" data-i18n="navAbout">
+                Who we are
+            </a>
+
+        </nav>
+
+        <div class="header-actions">
+
+            <!-- LOCATION -->
+
+            <div class="location">
+
+                <button
+                    class="location-button"
+                    id="locationButton"
+                    aria-expanded="false"
+                >
+                    <span id="currentFlag">🇳🇴</span>
+                    <span id="currentLocation">Norway</span>
+                    <span class="arrow">⌄</span>
+                </button>
+
+                <div
+                    class="location-menu"
+                    id="locationMenu"
+                >
+
+                    <button
+                        data-location="Norway"
+                        data-flag="🇳🇴"
+                    >
+                        🇳🇴 Norway
+                    </button>
+
+                    <button
+                        data-location="UAE"
+                        data-flag="🇦🇪"
+                    >
+                        🇦🇪 UAE
+                    </button>
+
+                    <button
+                        data-location="International"
+                        data-flag="🌐"
+                    >
+                        🌐 International
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- LANGUAGE -->
+
+            <div class="language">
+
+                <button
+                    class="language-button"
+                    id="languageButton"
+                    aria-expanded="false"
+                >
+                    <span id="currentLanguage">EN</span>
+                    <span class="arrow">⌄</span>
+                </button>
+
+                <div
+                    class="language-menu"
+                    id="languageMenu"
+                >
+
+                    <button
+                        data-language="en"
+                    >
+                        English
+                    </button>
+
+                    <button
+                        data-language="no"
+                    >
+                        Norsk
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- THEME -->
+
+            <button
+                class="theme-toggle"
+                id="themeToggle"
+                aria-label="Toggle dark mode"
+            >
+                ☀
+            </button>
+
+            <a
+                href="#contact"
+                class="contact-link"
+                data-i18n="contactButton"
+            >
+                Contact
+            </a>
+
+        </div>
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+
+    </div>
+
+    <!-- MOBILE NAV -->
+
+    <div class="mobile-nav" id="mobileNav">
+
+        <a href="#services" data-i18n="navServices">
+            What we do
+        </a>
+
+        <a href="#industries" data-i18n="navIndustries">
+            Industries
+        </a>
+
+        <a href="#insights" data-i18n="navInsights">
+            Insights
+        </a>
+
+        <a href="#about" data-i18n="navAbout">
+            Who we are
+        </a>
+
+        <a href="#contact" data-i18n="contactButton">
+            Contact
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-label" data-i18n="heroLabel">
+            TRINITY SERVICES
+        </div>
+
+        <h1 data-i18n="heroTitle">
+            Technology that moves business forward.
+        </h1>
+
+        <p
+            class="hero-text"
+            data-i18n="heroText"
+        >
+            We build software, platforms and professional services
+            for organisations operating where technology and
+            business complexity meet.
+        </p>
+
+        <a
+            href="#services"
+            class="hero-button"
+            data-i18n="heroButton"
+        >
+            Explore our services →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="intro">
+
+    <div class="section-label" data-i18n="introLabel">
+        WHAT WE DO
+    </div>
+
+    <div class="intro-grid">
+
+        <h2 data-i18n="introTitle">
+            We turn complex technology challenges into practical solutions.
+        </h2>
+
+        <div>
+
+            <p data-i18n="introText">
+                Trinity Services works with organisations that depend
+                on reliable technology, strong engineering and effective
+                project delivery.
+            </p>
+
+            <p data-i18n="introText2">
+                From software development and developer portals to
+                telecom engineering, oil & gas services and project
+                management, we help teams move from ideas to results.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section
+    class="services"
+    id="services"
+>
+
+    <div class="section-label" data-i18n="servicesLabel">
+        OUR SERVICES
+    </div>
+
+    <div class="service-grid">
+
+        <article class="service-card">
+
+            <span class="service-number">01</span>
+
+            <h3 data-i18n="service1Title">
+                Software development
+            </h3>
+
+            <p data-i18n="service1Text">
+                Custom software, internal tools, automation,
+                integrations and applications built around
+                your organisation's needs.
+            </p>
+
+            <a href="#contact" data-i18n="learnMore">
+                Learn more →
+            </a>
+
+        </article>
+
+
+        <article class="service-card">
+
+            <span class="service-number">02</span>
+
+            <h3 data-i18n="service2Title">
+                Developer portals
+            </h3>
+
+            <p data-i18n="service2Text">
+                Developer-focused platforms that make APIs,
+                documentation, services and technical resources
+                easier to discover and use.
+            </p>
+
+            <a href="#contact" data-i18n="learnMore">
+                Learn more →
+            </a>
+
+        </article>
+
+
+        <article class="service-card">
+
+            <span class="service-number">03</span>
+
+            <h3 data-i18n="service3Title">
+                Professional services
+            </h3>
+
+            <p data-i18n="service3Text">
+                Technical and professional expertise for
+                telecommunications, oil & gas and technology
+                organisations.
+            </p>
+
+            <a href="#contact" data-i18n="learnMore">
+                Learn more →
+            </a>
+
+        </article>
+
+
+        <article class="service-card">
+
+            <span class="service-number">04</span>
+
+            <h3 data-i18n="service4Title">
+                Project management
+            </h3>
+
+            <p data-i18n="service4Text">
+                Structured project delivery that connects
+                technical teams, business requirements,
+                timelines and outcomes.
+            </p>
+
+            <a href="#contact" data-i18n="learnMore">
+                Learn more →
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURE ================= -->
+
+<section class="feature">
+
+    <div class="feature-text">
+
+        <div class="section-label" data-i18n="featureLabel">
+            ENGINEERING
+        </div>
+
+        <h2 data-i18n="featureTitle">
+            Engineering solutions for industries where complexity matters.
+        </h2>
+
+        <p data-i18n="featureText">
+            Technology becomes most valuable when it solves a real
+            operational problem. We combine engineering thinking
+            with industry knowledge to create solutions that work
+            in the real world.
+        </p>
+
+        <a href="#industries" data-i18n="featureButton">
+            Explore industries →
+        </a>
+
+    </div>
+
+    <div class="feature-pattern">
+
+        <div class="pattern-grid"></div>
+
+        <div class="pattern-word">
+            T
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INDUSTRIES ================= -->
+
+<section
+    class="industries"
+    id="industries"
+>
+
+    <div class="section-label" data-i18n="industriesLabel">
+        INDUSTRIES
+    </div>
+
+    <div class="industry-heading">
+
+        <h2 data-i18n="industriesTitle">
+            Experience where technology meets industry.
+        </h2>
+
+    </div>
+
+
+    <div class="industry-grid">
+
+        <article>
+
+            <span>01</span>
+
+            <h3 data-i18n="industry1Title">
+                Telecommunications
+            </h3>
+
+            <p data-i18n="industry1Text">
+                Network automation, monitoring, software platforms,
+                data processing and operational technology for
+                telecommunications environments.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <span>02</span>
+
+            <h3 data-i18n="industry2Title">
+                Oil & gas
+            </h3>
+
+            <p data-i18n="industry2Text">
+                Technology and professional services supporting
+                complex operational environments across the
+                energy sector.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <span>03</span>
+
+            <h3 data-i18n="industry3Title">
+                Technology
+            </h3>
+
+            <p data-i18n="industry3Text">
+                Digital products, software engineering,
+                integrations and technology solutions for
+                modern organisations.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INSIGHTS ================= -->
+
+<section
+    class="insights"
+    id="insights"
+>
+
+    <div class="section-label" data-i18n="insightsLabel">
+        INSIGHTS & WORK
+    </div>
+
+    <h2 data-i18n="insightsTitle">
+        Ideas, technology and practical delivery.
+    </h2>
+
+
+    <div class="insight-grid">
+
+        <article class="insight">
+
+            <span class="insight-tag">
+                TELECOM
+            </span>
+
+            <h3 data-i18n="insight1Title">
+                Building better network operations through automation
+            </h3>
+
+            <p data-i18n="insight1Text">
+                How automation can reduce repetitive operational
+                work and help technical teams focus on higher-value
+                problems.
+            </p>
+
+            <a href="#contact" data-i18n="readMore">
+                Read more →
+            </a>
+
+        </article>
+
+
+        <article class="insight">
+
+            <span class="insight-tag">
+                SOFTWARE
+            </span>
+
+            <h3 data-i18n="insight2Title">
+                From internal tools to scalable platforms
+            </h3>
+
+            <p data-i18n="insight2Text">
+                Turning practical internal requirements into
+                maintainable software platforms.
+            </p>
+
+            <a href="#contact" data-i18n="readMore">
+                Read more →
+            </a>
+
+        </article>
+
+
+        <article class="insight">
+
+            <span class="insight-tag">
+                DELIVERY
+            </span>
+
+            <h3 data-i18n="insight3Title">
+                Making complex projects easier to deliver
+            </h3>
+
+            <p data-i18n="insight3Text">
+                Connecting people, technology and business goals
+                through structured project delivery.
+            </p>
+
+            <a href="#contact" data-i18n="readMore">
+                Read more →
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section
+    class="about"
+    id="about"
+>
+
+    <div class="section-label" data-i18n="aboutLabel">
+        WHO WE ARE
+    </div>
+
+    <div class="about-grid">
+
+        <h2 data-i18n="aboutTitle">
+            A technology services company built around practical expertise.
+        </h2>
+
+        <div>
+
+            <p data-i18n="aboutText">
+                Trinity Services brings together software development,
+                technical consulting and project delivery to help
+                organisations solve difficult technology problems.
+            </p>
+
+            <p data-i18n="aboutText2">
+                We believe good technology should be useful,
+                understandable and built to last.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section
+    class="contact"
+    id="contact"
+>
+
+    <div class="contact-heading">
+
+        <div class="section-label" data-i18n="contactLabel">
+            GET IN TOUCH
+        </div>
+
+        <h2 data-i18n="contactTitle">
+            Let's build something useful.
+        </h2>
+
+        <p data-i18n="contactText">
+            Tell us what you're working on and we'll start the conversation.
+        </p>
+
+    </div>
+
+
+    <form
+        class="contact-form"
+        id="contactForm"
+    >
+
+        <div class="form-row">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your name"
+                data-placeholder="name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email address"
+                data-placeholder="email"
+                required
+            >
+
+        </div>
+
+
+        <input
+            type="text"
+            id="company"
+            placeholder="Company"
+            data-placeholder="company"
+        >
+
+
+        <textarea
+            id="message"
+            placeholder="Tell us about your project"
+            data-placeholder="message"
+            required
+        ></textarea>
+
+
+        <button
+            type="submit"
+            class="submit-button"
+            data-i18n="sendMessage"
+        >
+            Send message →
+        </button>
+
+    </form>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-top">
+
+        <div class="footer-brand">
+
+            <a href="#" class="logo footer-logo">
+
+                <span class="logo-symbol">
+                    T
+                </span>
+
+                <span class="logo-text">
+                    TRINITY
+                </span>
+
+            </a>
+
+            <p data-i18n="footerText">
+                Technology services for complex industries.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <div>
+
+                <h4 data-i18n="footerExplore">
+                    Explore
+                </h4>
+
+                <a href="#services" data-i18n="navServices">
+                    What we do
+                </a>
+
+                <a href="#industries" data-i18n="navIndustries">
+                    Industries
+                </a>
+
+                <a href="#insights" data-i18n="navInsights">
+                    Insights
+                </a>
+
+                <a href="#about" data-i18n="navAbout">
+                    Who we are
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h4 data-i18n="footerContact">
+                    Contact
+                </h4>
+
+                <a href="#contact">
+                    Get in touch
+                </a>
+
+                <a href="mailto:hello@trinityservices.com">
+                    hello@trinityservices.com
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © <span id="year"></span> Trinity Services
+        </span>
+
+        <span data-i18n="footerRights">
+            All rights reserved.
+        </span>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
