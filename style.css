@@ -604,11 +604,12 @@ main {
 
     padding: 120px 42px;
 
-    background: #eeeeee;
+    background: #1a1a1a;
 
-    color: #111111;
+    color: white;
 
 }
+
 
 
 .services > * {
@@ -1527,6 +1528,43 @@ body.light-mode .intro {
 
 
 body.light-mode .intro p {
+
+    color: #666666;
+
+}
+
+
+body.light-mode .services {
+
+    background: #eeeeee;
+
+    color: #111111;
+
+}
+
+
+body.light-mode .services .section-label {
+
+    color: #666666;
+
+}
+
+
+body.light-mode .service-grid {
+
+    border-color: #c7c7c7;
+
+}
+
+
+body.light-mode .service-card {
+
+    border-color: #c7c7c7;
+
+}
+
+
+body.light-mode .service-card p {
 
     color: #666666;
 
