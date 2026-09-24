@@ -77,7 +77,7 @@ const translations = {
         navIndustries: "Industries",
         navInsights: "Insights",
         navAbout: "Who we are",
-        contactButton: "Contact",
+        contactButton: "Contact Us",
 
         heroLabel: "TRINITY SERVICES",
 
@@ -85,7 +85,7 @@ const translations = {
             "Technology that moves business forward.",
 
         heroText:
-            "We build software, platforms and professional services for organisations operating where technology and business complexity meet.",
+            "We deliver project management, IT consulting, and digital transformation services for telecom and Oil & Gas organisations operating where technology and business complexity meet.",
 
         heroButton:
             "Explore our services →",
@@ -106,28 +106,28 @@ const translations = {
             "OUR SERVICES",
 
         service1Title:
-            "Software development",
+            "Project Management",
 
         service1Text:
-            "Custom software, internal tools, automation, integrations and applications built around your organisation's needs.",
+            "Structured project delivery that connects technical teams, business requirements, timelines and outcomes.",
 
         service2Title:
-            "Developer portals",
+            "Professional Services",
 
         service2Text:
-            "Developer-focused platforms that make APIs, documentation, services and technical resources easier to discover and use.",
-
-        service3Title:
-            "Professional services",
-
-        service3Text:
             "Technical and professional expertise for telecommunications, oil & gas and technology organisations.",
 
+        service3Title:
+            "Developer Portals",
+
+        service3Text:
+            "Developer-focused platforms that make APIs, documentation, services and technical resources easier to discover and use.",
+
         service4Title:
-            "Project management",
+            "Software Development",
 
         service4Text:
-            "Structured project delivery that connects technical teams, business requirements, timelines and outcomes.",
+            "Custom software, internal tools, automation, integrations and applications built around your organisation's needs.",
 
         learnMore:
             "Learn more →",
@@ -157,7 +157,7 @@ const translations = {
             "Network automation, monitoring, software platforms, data processing and operational technology for telecommunications environments.",
 
         industry2Title:
-            "Oil & gas",
+            "Oil & Gas",
 
         industry2Text:
             "Technology and professional services supporting complex operational environments across the energy sector.",
@@ -238,7 +238,7 @@ const translations = {
             "Explore",
 
         footerContact:
-            "Contact",
+            "Contact Us",
 
         footerRights:
             "All rights reserved."
