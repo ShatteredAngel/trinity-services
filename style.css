@@ -18,7 +18,6 @@
     --mid-grey: #d8d8d8;
     --text-grey: #777777;
 
-    --lime: #c8ff00;
 
     --border-dark: #363636;
     --border-light: #d5d5d5;
@@ -731,13 +730,9 @@ main {
 
 
 .feature-text {
-
     padding: 100px 10%;
-
-    background: var(--lime);
-
-    color: #111111;
-
+    background: #222222;
+    color: white;
 }
 
 
