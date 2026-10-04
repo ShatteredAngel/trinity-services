@@ -18,6 +18,7 @@
     --mid-grey: #d8d8d8;
     --text-grey: #777777;
 
+    --lime: #c8ff00;
 
     --border-dark: #363636;
     --border-light: #d5d5d5;
@@ -603,12 +604,11 @@ main {
 
     padding: 120px 42px;
 
-    background: #1a1a1a;
+    background: #eeeeee;
 
-    color: white;
+    color: #111111;
 
 }
-
 
 
 .services > * {
@@ -730,9 +730,13 @@ main {
 
 
 .feature-text {
+
     padding: 100px 10%;
-    background: #222222;
-    color: white;
+
+    background: var(--lime);
+
+    color: #111111;
+
 }
 
 
@@ -1529,43 +1533,6 @@ body.light-mode .intro p {
 }
 
 
-body.light-mode .services {
-
-    background: #eeeeee;
-
-    color: #111111;
-
-}
-
-
-body.light-mode .services .section-label {
-
-    color: #666666;
-
-}
-
-
-body.light-mode .service-grid {
-
-    border-color: #c7c7c7;
-
-}
-
-
-body.light-mode .service-card {
-
-    border-color: #c7c7c7;
-
-}
-
-
-body.light-mode .service-card p {
-
-    color: #666666;
-
-}
-
-
 body.light-mode .industries {
 
     background: white;
@@ -1885,3 +1852,25 @@ body.light-mode footer {
     }
 
 }
+/* Contact navigation, insight artwork and client logos */
+section[id] { scroll-margin-top: 100px; }
+#contact:focus { outline: none; }
+a:focus-visible, button:focus-visible, .contact input:focus-visible, .contact textarea:focus-visible { outline: 2px solid var(--lime); outline-offset: 5px; }
+body.light-mode .contact-link { background: #111; color: #fff; }
+body.light-mode .mobile-menu-button { color: #111; }
+.insight { overflow: hidden; }
+.insight-image { display: block; width: calc(100% + 64px); max-width: none; height: auto; aspect-ratio: 16 / 9; object-fit: cover; margin: -32px -32px 28px; }
+.insight-tag { margin-bottom: 24px; }
+.insight a { margin-top: auto; }
+.clients { padding: 100px 42px; background: #eee; color: #111; }
+.clients-inner { max-width: 1500px; margin: auto; }
+.clients h2 { font: 500 clamp(36px, 5vw, 64px)/1.05 "Space Grotesk", sans-serif; letter-spacing: -.04em; margin-bottom: 40px; }
+.clients .section-label { color: #666; }
+.client-grid { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; max-width: 950px; }
+.client-card { padding: 28px; background: #fff; border: 1px solid #ddd; text-align: center; }
+.client-logo { height: 150px; display: flex; align-items: center; justify-content: center; }
+.client-logo img { display: block; max-width: 100%; width: auto; max-height: 130px; object-fit: contain; }
+.client-card p { margin-top: 22px; font-weight: 600; }
+.form-note { margin-top: 20px; color: #aaa; line-height: 1.6; font-size: 14px; }
+@media (max-width: 650px) { .clients { padding: 80px 20px; } .client-grid { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
