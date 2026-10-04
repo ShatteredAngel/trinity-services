@@ -1,3 +1,8 @@
+const CONTACT_EMAIL = "christopher.aruldoss@gmail.com";
+const preferences = {
+ getItem(key) { try { return localStorage.getItem(key); } catch { return null; } },
+ setItem(key, value) { try { localStorage.setItem(key, value); } catch {} }
+};
 /* =========================================================
    TRINITY SERVICES
    Main JavaScript
@@ -52,12 +57,12 @@ document.querySelectorAll(
             "false"
         );
 
-        localStorage.setItem(
+        preferences.setItem(
             "trinity-location",
             this.dataset.location
         );
 
-        localStorage.setItem(
+        preferences.setItem(
             "trinity-flag",
             this.dataset.flag
         );
@@ -72,12 +77,15 @@ document.querySelectorAll(
 const translations = {
 
     en: {
+        clientsLabel: "OUR CLIENTS",
+        clientsTitle: "Who we work with.",
+        emailNote: "Messages are delivered through FormSubmit. You may be asked to complete a spam check.",
 
         navServices: "What we do",
         navIndustries: "Industries",
         navInsights: "Insights",
         navAbout: "Who we are",
-        contactButton: "Contact Us",
+        contactButton: "Contact",
 
         heroLabel: "TRINITY SERVICES",
 
@@ -85,7 +93,7 @@ const translations = {
             "Technology that moves business forward.",
 
         heroText:
-            "We deliver project management, IT consulting, and digital transformation services for telecom and Oil & Gas organisations operating where technology and business complexity meet.",
+            "We build software, platforms and professional services for organisations operating where technology and business complexity meet.",
 
         heroButton:
             "Explore our services →",
@@ -106,28 +114,28 @@ const translations = {
             "OUR SERVICES",
 
         service1Title:
-            "Project Management",
+            "Software development",
 
         service1Text:
-            "Structured project delivery that connects technical teams, business requirements, timelines and outcomes.",
+            "Custom software, internal tools, automation, integrations and applications built around your organisation's needs.",
 
         service2Title:
-            "Professional Services",
+            "Developer portals",
 
         service2Text:
-            "Technical and professional expertise for telecommunications, oil & gas and technology organisations.",
-
-        service3Title:
-            "Developer Portals",
-
-        service3Text:
             "Developer-focused platforms that make APIs, documentation, services and technical resources easier to discover and use.",
 
+        service3Title:
+            "Professional services",
+
+        service3Text:
+            "Technical and professional expertise for telecommunications, oil & gas and technology organisations.",
+
         service4Title:
-            "Software Development",
+            "Project management",
 
         service4Text:
-            "Custom software, internal tools, automation, integrations and applications built around your organisation's needs.",
+            "Structured project delivery that connects technical teams, business requirements, timelines and outcomes.",
 
         learnMore:
             "Learn more →",
@@ -157,7 +165,7 @@ const translations = {
             "Network automation, monitoring, software platforms, data processing and operational technology for telecommunications environments.",
 
         industry2Title:
-            "Oil & Gas",
+            "Oil & gas",
 
         industry2Text:
             "Technology and professional services supporting complex operational environments across the energy sector.",
@@ -238,7 +246,7 @@ const translations = {
             "Explore",
 
         footerContact:
-            "Contact Us",
+            "Contact",
 
         footerRights:
             "All rights reserved."
@@ -247,6 +255,9 @@ const translations = {
 
 
     no: {
+        clientsLabel: "VÅRE KUNDER",
+        clientsTitle: "Hvem vi jobber med.",
+        emailNote: "Meldinger sendes via FormSubmit. Du kan bli bedt om å fullføre en spamkontroll.",
 
         navServices:
             "Hva vi gjør",
@@ -504,7 +515,7 @@ function applyLanguage(language) {
         language === "no" ? "NO" : "EN";
 
 
-    localStorage.setItem(
+    preferences.setItem(
         "trinity-language",
         language
     );
@@ -636,7 +647,7 @@ function applyTheme(theme) {
 
     }
 
-    localStorage.setItem(
+    preferences.setItem(
         "trinity-theme",
         theme
     );
@@ -651,7 +662,7 @@ function applyTheme(theme) {
 */
 
 const savedTheme =
-    localStorage.getItem("trinity-theme");
+    preferences.getItem("trinity-theme");
 
 
 if (savedTheme === "light") {
@@ -685,10 +696,10 @@ themeToggle.addEventListener(
 /* ================= RESTORE LOCATION ================= */
 
 const savedLocation =
-    localStorage.getItem("trinity-location");
+    preferences.getItem("trinity-location");
 
 const savedFlag =
-    localStorage.getItem("trinity-flag");
+    preferences.getItem("trinity-flag");
 
 
 if (savedLocation && savedFlag) {
@@ -705,7 +716,7 @@ if (savedLocation && savedFlag) {
 /* ================= RESTORE LANGUAGE ================= */
 
 const savedLanguage =
-    localStorage.getItem("trinity-language");
+    preferences.getItem("trinity-language");
 
 
 if (savedLanguage) {
@@ -727,64 +738,7 @@ document.getElementById(
     new Date().getFullYear();
 
 
-/* ================= CONTACT FORM ================= */
-
-document.getElementById(
-    "contactForm"
-).addEventListener(
-    "submit",
-    function (event) {
-
-        event.preventDefault();
-
-
-        const name =
-            document.getElementById(
-                "name"
-            ).value;
-
-        const email =
-            document.getElementById(
-                "email"
-            ).value;
-
-        const company =
-            document.getElementById(
-                "company"
-            ).value;
-
-        const message =
-            document.getElementById(
-                "message"
-            ).value;
-
-
-        const subject =
-            encodeURIComponent(
-                "Trinity Services project enquiry"
-            );
-
-
-        const body =
-            encodeURIComponent(
-`Name: ${name}
-
-Email: ${email}
-
-Company: ${company}
-
-Project:
-
-${message}`
-            );
-
-
-        window.location.href =
-            `mailto:hello@trinityservices.com?subject=${subject}&body=${body}`;
-
-    }
-);
-
+/* The contact form submits directly to FormSubmit using its HTML action. */
 
 /* ================= MOBILE MENU ================= */
 
@@ -829,3 +783,23 @@ document.querySelectorAll(
     );
 
 });
+// Keep the footer and form recipient in sync.
+document.getElementById("contactForm").action = `https://formsubmit.co/${CONTACT_EMAIL}`;
+document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+    link.href = `mailto:${CONTACT_EMAIL}`;
+    link.textContent = CONTACT_EMAIL;
+});
+// Contact links use native anchors, with an offset for the sticky header.
+document.querySelectorAll('a[href="#contact"]').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        document.getElementById('contact').focus({ preventScroll: true });
+    });
+});
+mobileMenuButton.addEventListener('click', () => {
+    mobileMenuButton.setAttribute('aria-expanded', String(mobileNav.classList.contains('active')));
+});
+document.querySelectorAll('.mobile-nav a').forEach(link => link.addEventListener('click', () => {
+    mobileMenuButton.setAttribute('aria-expanded', 'false');
+}));
