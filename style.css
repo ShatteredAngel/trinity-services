@@ -604,9 +604,9 @@ main {
 
     padding: 120px 42px;
 
-    background: #eeeeee;
+    background: #171717;
 
-    color: #111111;
+    color: #ffffff;
 
 }
 
@@ -623,7 +623,7 @@ main {
 
 .services .section-label {
 
-    color: #666666;
+    color: #888888;
 
 }
 
@@ -634,7 +634,7 @@ main {
 
     grid-template-columns: repeat(4, 1fr);
 
-    border-top: 1px solid #c7c7c7;
+    border-top: 1px solid #363636;
 
 }
 
@@ -645,7 +645,7 @@ main {
 
     padding: 30px;
 
-    border-right: 1px solid #c7c7c7;
+    border-right: 1px solid #363636;
 
     display: flex;
 
@@ -656,7 +656,7 @@ main {
 
 .service-card:first-child {
 
-    border-left: 1px solid #c7c7c7;
+    border-left: 1px solid #363636;
 
 }
 
@@ -686,12 +686,15 @@ main {
 
 }
 
+    /* dark-mode heading */
+    color: #ffffff;
+
 
 .service-card p {
 
     margin-bottom: 28px;
 
-    color: #666666;
+    color: #999999;
 
     font-size: 15px;
 
@@ -705,6 +708,8 @@ main {
     font-size: 14px;
 
     font-weight: 600;
+
+    color: #ffffff;
 
 }
 
@@ -1533,6 +1538,36 @@ body.light-mode .intro p {
 }
 
 
+body.light-mode .services {
+    background: #eeeeee;
+    color: #111111;
+}
+
+body.light-mode .services .section-label {
+    color: #666666;
+}
+
+body.light-mode .service-grid {
+    border-color: #c7c7c7;
+}
+
+body.light-mode .service-card {
+    border-color: #c7c7c7;
+}
+
+body.light-mode .service-card h3 {
+    color: #111111;
+}
+
+body.light-mode .service-card p {
+    color: #666666;
+}
+
+body.light-mode .service-card a {
+    color: #111111;
+}
+
+
 body.light-mode .industries {
 
     background: white;
@@ -1695,7 +1730,7 @@ body.light-mode footer {
 
     .service-card {
 
-        border-bottom: 1px solid #c7c7c7;
+        border-bottom: 1px solid #363636;
 
     }
 
@@ -1817,7 +1852,7 @@ body.light-mode footer {
 
         min-height: 350px;
 
-        border-left: 1px solid #c7c7c7;
+        border-left: 1px solid #363636;
 
     }
 
